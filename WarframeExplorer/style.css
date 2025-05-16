@@ -1,0 +1,170 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff; /* Licht thema achtergrondkleur */
+  color: #111; /* Donkere tekstkleur voor licht thema */
+  margin: 0;
+  padding: 1rem;
+}
+
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+input {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.controls input, .controls select, .controls button {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+body.dark-theme .card {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #444;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #666;
+}
+
+.fav-btn {
+  background: #ffcc00;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.fav-btn:hover {
+  background: #ffaa00;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #f9f9f9; /* Zachtere achtergrondkleur */
+  color: #333; /* Donkere tekstkleur */
+  padding: 2rem;
+  border-radius: 12px; /* Rondere hoeken */
+  max-width: 600px; /* Beperk de breedte */
+  max-height: 90%; /* Beperk de hoogte */
+  overflow-y: auto; /* Voeg scrollen toe als de inhoud te groot is */
+  text-align: left;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtiele schaduw */
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtiele schaduw voor afbeeldingen */
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #444;
+}
+
+.modal-content h3 {
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  color: #555;
+  border-bottom: 2px solid #ddd; /* Onderstreep koppen */
+  padding-bottom: 0.5rem;
+}
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-content ul li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.modal-content ul li strong {
+  color: #222; /* Maak de titels van abilities donkerder */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #444; /* Donkerdere kleur bij hover */
+}
