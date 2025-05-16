@@ -118,6 +118,21 @@ button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtiele schaduw */
 }
 
+body.dark-theme .modal-content {
+  background: #232323;
+  color: #f1f1f1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+body.dark-theme .modal-content h2,
+body.dark-theme .modal-content h3 {
+  color: #ffe066;
+}
+
+body.dark-theme .modal-content ul li strong {
+  color: #ffe066;
+}
+
 .modal-content img {
   max-width: 100%;
   height: auto;
@@ -165,6 +180,6 @@ button:hover {
   transition: color 0.3s;
 }
 
-.close:hover {
+close:hover {
   color: #444; /* Donkerdere kleur bij hover */
 }
