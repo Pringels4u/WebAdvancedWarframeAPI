@@ -27,11 +27,59 @@ input {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
+  align-items: stretch; /* Zorgt dat alle controls even hoog zijn */
+  height: 42px; /* Zorgt dat alles op één lijn staat */
 }
 
-.controls input, .controls select, .controls button {
-  padding: 0.5rem;
+.controls input,
+.controls select,
+.controls button {
+  padding: 0.5rem 1rem;
   font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #222;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  height: 100%; /* Vul de volledige hoogte van de controls container */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.controls button {
+  background: #ffe066;
+  color: #222;
+  border: 1px solid #ffe066;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.controls button:hover {
+  background: #ffd23f;
+  border-color: #ffd23f;
+}
+
+body.dark-theme .controls input,
+body.dark-theme .controls select,
+body.dark-theme .controls button {
+  background: #232323;
+  color: #ffe066;
+  border: 1px solid #444;
+}
+
+body.dark-theme .controls button {
+  background: #444;
+  color: #ffe066;
+  border: 1px solid #ffe066;
+}
+
+body.dark-theme .controls button:hover {
+  background: #333;
+  border-color: #ffe066;
 }
 
 .card {

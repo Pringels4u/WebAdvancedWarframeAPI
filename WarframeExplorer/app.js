@@ -29,6 +29,10 @@ function displayWarframes(data) {
       <select id="sort">
         <option value="name">Sort by Name</option>
         <option value="health">Sort by Health</option>
+        <option value="shield">Sort by Shield</option>
+        <option value="armor">Sort by Armor</option>
+        <option value="energy">Sort by Energy</option>
+        <option value="speed">Sort by Speed</option>
       </select>
       <button id="theme-toggle">Toggle Theme</button>
       <button id="view-favorites">View Favorites</button>
@@ -145,6 +149,10 @@ function displayWarframes(data) {
     const sorted = [...data].sort((a, b) => {
       if (sortBy === 'name') return a.name.localeCompare(b.name);
       if (sortBy === 'health') return (b.health || 0) - (a.health || 0);
+      if (sortBy === 'shield') return (b.shield || 0) - (a.shield || 0);
+      if (sortBy === 'armor') return (b.armor || 0) - (a.armor || 0);
+      if (sortBy === 'energy') return ((b.power ?? b.energy) || 0) - ((a.power ?? a.energy) || 0);
+      if (sortBy === 'speed') return ((b.sprintSpeed ?? b.speed) || 0) - ((a.sprintSpeed ?? a.speed) || 0);
     });
     render(sorted);
   });
