@@ -20,6 +20,7 @@ Warframe Explorer is een interactieve single-page webapplicatie waarmee gebruike
 
 ## Screenshots
 ![alt text](image.png)
+![alt text](image-1.png)
 
 ## Gebruikte bronnen
 - Warframe API documentatie
