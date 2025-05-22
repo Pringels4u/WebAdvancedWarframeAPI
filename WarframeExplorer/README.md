@@ -19,9 +19,11 @@ Warframe Explorer is een interactieve single-page webapplicatie waarmee gebruike
 3. Zorg dat je internetverbinding hebt om de API te bereiken.
 
 ## Screenshots
-*(Voeg hier screenshots van de applicatie toe)*
+![alt text](image.png)
 
 ## Gebruikte bronnen
 - Warframe API documentatie
 - MDN Web Docs
 - ChatGPT AI
+- Github Copilot
+- https://www.youtube.com/watch?v=4Gp-IUngvDE

@@ -12,7 +12,8 @@ async function loadWarframes() {
     if (!res.ok) {
       throw new Error(`HTTP error! status: ${res.status}`);
     }
-    const warframes = await res.json();
+    let warframes = await res.json();
+    warframes = warframes.filter(wf => wf.name !== "Helminth");
     displayWarframes(warframes);
   } catch (e) {
     app.innerHTML = '<p>Failed to load data. Check the console for more details.</p>';
